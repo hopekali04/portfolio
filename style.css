@@ -1,0 +1,347 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Dark background color */
+    color: #fff; /* Text color */
+  }
+
+nav {
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.jumbotron {
+  background-image: url('pexels-christina-morillo-1181387.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.jumbotron h1 {
+    color: #111;
+    font-size: 58px;
+}
+
+.jumbotron p {
+    color: #111;
+  font-size: 30px;
+}
+
+/* About Me Section */
+#about {
+  padding: 50px;
+  text-align: center;
+  background-color: #111; /* White background */
+  color: #fff; /* Text color on the white background */
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-column {
+  text-align: left;
+  width: 30%;
+  position: relative; 
+}
+
+/* Add the border line */
+.about-column.one :before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: 3rem;
+  left: 100%; /* this places the line in the middle of the column */
+  border-left: 1px solid #ccc; /* Border color and thickness */
+}
+
+.about-column h3 {
+  font-size: 24px;
+}
+
+.about-column h4 {
+  font-size: 18px;
+}
+
+.about-column p {
+  margin-bottom: 20px;
+}
+
+.about-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-column li {
+  margin-bottom: 8px;
+}
+
+.download-cv-button {
+  display: block;
+  width: 150px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #007bff; 
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* New Section */
+#new-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background color */
+  color: #111; /* Text color on the light background */
+}
+
+.new-section h2 {
+  font-size: 36px;
+}
+
+.new-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.new-cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+.new-card {
+  width: 40%; /* this sets a width for the cards to fit two in a row */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.new-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.new-card li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .new-cards-container {
+    flex-direction: column; /* this switchs to a single column on smaller screens */
+  }
+
+  .new-card {
+    width: 100%;
+  }
+}
+/* Pricing Section */
+#pricing {
+  color: #111; /* Text color on the white background */
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-card {
+  width: 300px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+}
+
+.pricing-card .price {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card li {
+  margin-bottom: 8px;
+}
+
+/* Parallax effect */
+.parallax-section {
+  background-image: url('pexels-vlad-bagacian-1061623.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+}
+
+/* Skills Section */
+#skills {
+  padding: 50px;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: flex-start; /* Align the cards to the left */
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
+  gap: 20px; /* Add some spacing between the cards */
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+.skill-card {
+  margin-right: 5rem;
+  width: 200px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #111;
+}
+
+.skill-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.skill-card i {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* Contact Me Section */
+#contact {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form,
+.contact-info {
+  flex-basis: calc(50% - 20px); /* Two columns with 20px gap between them */
+}
+
+.contact-form h3,
+.contact-info h3 {
+  font-size: 24px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+section:not(:first-child) {
+  margin-top: 0px;/* Add some padding to the sections to give them space below the fixed navbar */
+}
+
+/* Smooth scrolling when clicking on navbar links */
+html {
+  scroll-behavior: smooth;
+}
