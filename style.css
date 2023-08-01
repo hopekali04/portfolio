@@ -1,3 +1,6 @@
+:root {
+  --purpleColor: #6E07F3
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -72,6 +75,55 @@ nav a {
   width: 100%; /* Each column takes the full width on small screens */
   max-width: 300px; /* maximum width for larger screens */
   margin-bottom: 30px; /* spacing between columns */
+}
+/* Banner Section */
+.banner-cr {
+  background-color: white;
+}
+.banner {
+  padding: 10%;
+  margin-left: 10%;
+  width: 80vw;
+  background-color: var(--purpleColor);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  padding: 1% 5% 1% 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bannerTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bannerText {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.bannerBTN {
+  background-color: #320370;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.bannerBTN:hover {
+  background-color: #0056b3;
 }
 
 /* Add the border line */
@@ -430,7 +482,7 @@ html {
 }
 
 footer {
-  background-color: #040202;
+  background-color: #ffffff;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -456,6 +508,6 @@ footer {
 }
 
 .social-icons i {
-  color: #007bff; /* Blue color for the icons */
+  color: var(--purpleColor); 
   font-size: 24px;
 }
