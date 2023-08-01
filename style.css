@@ -73,14 +73,9 @@ nav a {
 }
 
 /* Add the border line */
-.about-column.one :before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin-left: 3rem;
-  left: 100%; /* this places the line in the middle of the column */
-  border-left: 1px solid #ccc; /* Border color and thickness */
+.about-container .about-column:not(:last-child) {
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
 }
 
 .about-column h3 {
@@ -344,4 +339,35 @@ section:not(:first-child) {
 /* Smooth scrolling when clicking on navbar links */
 html {
   scroll-behavior: smooth;
+}
+
+footer {
+  background-color: #040202;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  /*background-color: #e1f0ff; /* Light blue background color */
+  padding: 10px; 
+  border-radius: 10px; /* rounded corners to the background */
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px; /* Vertically center the icons */
+  text-align: center; /* Center the icons horizontally */
+  border-radius: 50%; /* Make the icons circular */
+  background-color: #fff; /* White background for the icons */
+}
+
+.social-icons i {
+  color: #007bff; /* Blue color for the icons */
+  font-size: 24px;
 }
