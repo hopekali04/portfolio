@@ -9,36 +9,55 @@ body {
     color: #fff; /* Text color */
   }
 
-nav {
-  background-color: #111;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  .header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
   
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 5rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-}
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  
+  .logo img {
+    height: 3rem; 
+    width: auto; 
+  }
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content:center; 
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }  
 
 .jumbotron {
-  background-image: url('pexels-christina-morillo-1181387.jpg');
+  background-image: url('back.jpg');
   background-size: cover;
   background-position: center;
-  height: 70rem;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,30 +66,57 @@ nav a {
 }
 
 .jumbotron h1 {
-    color: #111;
-    font-size: 58px;
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
 }
 
 .jumbotron p {
-    color: #111;
+    color: #eaeaea;
   font-size: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron h1 {
+      font-size: 35px;
+  }
+
+  .jumbotron p {
+      font-size: 25px;
+  }
+}
+
+/* for even smaller screens */
+@media screen and (max-width: 480px) {
+  .jumbotron h1 {
+      font-size: 30px;
+  }
+
+  .jumbotron p {
+      font-size: 20px;
+  }
 }
 
 /* About Me Section */
 #about {
   padding: 50px;
   text-align: center;
-  background-color: #111; /* White background */
+  background-color: #181717; /* White background */
   color: #fff; /* Text color on the white background */
 }
 
 .about-container {
   display: flex;
   flex-wrap: wrap; /*to wrap to the next row on smaller screens */
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-
+.about-column h3{
+  color: var(--purpleColor);
+  text-align: center;
+}
 .about-column {
+  font-size: large;
   text-align: left;
   width: 100%; /* Each column takes the full width on small screens */
   max-width: 300px; /* maximum width for larger screens */
@@ -90,12 +136,13 @@ nav a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .row {
-  padding: 1% 5% 1% 5%;
+  font-size:larger;
+  padding: 2% 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -112,11 +159,13 @@ nav a {
   margin-bottom: 10px;
   text-align: center;
 }
+
 .bannerBTN {
+  font-size: larger;
   background-color: #320370;
   color: #fff;
   padding: 10px 20px;
-  border: 2px solid #35f118 ;
+  border: 2px solid #35f118;
   cursor: pointer;
   font-size: 16px;
   border-radius: 20px;
@@ -125,6 +174,18 @@ nav a {
 .bannerBTN:hover {
   background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 10%;
+  }
+  
+  .bannerBTN {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
 
 /* Add the border line */
 .about-container .about-column:not(:last-child) {
@@ -178,7 +239,7 @@ nav a {
   width: 150px;
   margin: 20px auto;
   padding: 10px 15px;
-  background-color: #007bff; 
+  background-color: var(--purpleColor); 
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -193,13 +254,18 @@ nav a {
   color: #111; /* Text color on the light background */
 }
 
-.new-section h2 {
+#new-section h2 {
   font-size: 36px;
+  color: var(--purpleColor);
+}
+#new-section h4 {
+  color: rgb(37, 31, 31);
 }
 
-.new-section h3 {
+#new-section h3 {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .new-cards-container {
@@ -221,11 +287,12 @@ nav a {
 }
 
 .new-card ul {
-  list-style: none;
+  list-style:decimal;
   padding: 0;
 }
 
 .new-card li {
+  margin-left: 10%;
   text-align: left;
   margin-bottom: 5px;
 }
@@ -341,6 +408,15 @@ nav a {
 
 .pricing-card li {
   margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .pricing-cards {
+    flex-wrap: wrap;
+  }
+  .pricing-card {
+    width: 100%;
+  }
 }
 
 /* Parallax effect */
